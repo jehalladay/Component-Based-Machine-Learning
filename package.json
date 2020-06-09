@@ -1,0 +1,37 @@
+{
+  "name": "neuro",
+  "version": "0.1.0",
+  "description": "A component-based machine learning architecture using implemented with JSX",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx babel --watch ./demo/jsx --out-dir ./demo/js/"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jehalladay/Component-Based-Machine-Learning.git"
+  },
+  "author": "James E. Halladay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jehalladay/Component-Based-Machine-Learning/issues"
+  },
+  "homepage": "https://github.com/jehalladay/Component-Based-Machine-Learning#readme",
+  "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-react-jsx": "^7.10.1"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-transform-react-jsx",
+        {
+          "throwIfNamespace": false,
+          "pragma": "Neuro.createCell",
+          "pragmaFrag": "Neuro.Fragment"
+        }
+      ]
+    ]
+  }
+}
