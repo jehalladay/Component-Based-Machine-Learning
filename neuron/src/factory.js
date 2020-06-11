@@ -1,8 +1,8 @@
-
+import { v4 } from 'uuid'
 // class Cell { }
 const NEURON_TYPE = Symbol.for('Neuron')
 
-const cells = []
+const cells = {}
 
 const neuron = function(type, key, props) {
     const cell = {
@@ -18,10 +18,11 @@ const neuron = function(type, key, props) {
 }
 
 const createCell = function(type, props, input) {
-    const key = props != null && props.key? props.key : Symbol('cell');
+    const keyId = props != null && props.key? props.key : Symbol('cell');
+    const keyValue = cells[keyId] || v4(keyId)
     const inputLength = arguments.length - 2;
-
-    cells.push(key)
+    
+    cells[keyId] = keyValue
     console.log('type =', type.name)
 
     props || (props = {})
@@ -37,8 +38,7 @@ const createCell = function(type, props, input) {
         }
         props.input = inputArray;
     }
-    return neuron(type, key, props)
-    // return this
+    return neuron(type, keyValue, props)
 }
 
 
