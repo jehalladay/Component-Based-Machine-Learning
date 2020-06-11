@@ -1,4 +1,4 @@
-import { Neuro, Component } from '../dep.js';
+import { Neuron, Component } from '../dep.js';
 import { TestComp } from './testComp.js'
 
 class TestComp2 extends Component {

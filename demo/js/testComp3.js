@@ -1,4 +1,4 @@
-import { Neuro, Component } from '../dep.js';
+import { Neuron, Component } from '../dep.js';
 import { TestComp } from './testComp.js';
 
 class TestComp3 extends Component {
@@ -10,7 +10,7 @@ class TestComp3 extends Component {
   }
 
   render() {
-    return Neuro.createCell(TestComp, {
+    return Neuron.createCell(TestComp, {
       type: this.val
     }, "Hello from TestComp3", this.props.input);
   }

@@ -1,4 +1,4 @@
-import { Neuro } from '../dep.js'
+import { Neuron } from '../dep.js'
 import { TestComp } from './testComp.js'
 import{ v4 } from 'uuid'
 
@@ -10,8 +10,8 @@ const testVal = <p>hello world</p>
 const testVal2 = <TestComp>hello world</TestComp>
 const testVal3 = <testComp>hello world</testComp>
 // const testVal4 = <TestComp>hello world</TestComp>
-
-console.log("hello", <>world</>)    
+ 
+console.log("hello", <>world</>)     
  
 console.log(testVal)
 console.log(testVal2)

@@ -21,6 +21,7 @@
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/plugin-transform-react-jsx": "^7.10.1",
+    "react": "^16.13.1",
     "uuid": "^8.1.0"
   },
   "babel": {
@@ -29,8 +30,8 @@
         "@babel/plugin-transform-react-jsx",
         {
           "throwIfNamespace": false,
-          "pragma": "Neuro.createCell",
-          "pragmaFrag": "Neuro.Fragment"
+          "pragma": "Neuron.createCell",
+          "pragmaFrag": "Neuron.Fragment"
         }
       ]
     ]

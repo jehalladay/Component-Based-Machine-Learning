@@ -1,4 +1,4 @@
-import { Neuro, Component } from '../dep.js';
+import { Neuron, Component } from '../dep.js';
 
 class TestComp extends Component {
     constructor(props) {

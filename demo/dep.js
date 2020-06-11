@@ -1,1 +1,1 @@
-export { Neuro, Component } from '../neuron/index.js'
+export { Neuron, Component } from '../neuron/index.js'

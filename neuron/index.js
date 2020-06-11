@@ -8,7 +8,7 @@ import { py } from './src/py.js'
 
 'use strict';
 
-const Neuro = {
+const Neuron = {
     Component: Component,
     config: config,
     createCell: createCell,
@@ -17,4 +17,4 @@ const Neuro = {
 };
 
 
-export { Neuro, Component, createCell, Fragment }
+export { Neuron, Component, createCell, Fragment }
