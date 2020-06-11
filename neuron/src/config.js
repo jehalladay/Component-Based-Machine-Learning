@@ -1,5 +1,14 @@
+const cells = {}
+
 const config = {
-    PYTHON_PATH: '../python/'
+    PYTHON_PATH: '../python/',
+    NEURON_TYPE: Symbol.for('neuron.cell')
 }
 
-export { config }
+const presetComponents = {}
+
+
+
+
+
+export { config, cells, presetComponents }

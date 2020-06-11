@@ -1,18 +1,24 @@
 import { v4 } from 'uuid'
-// class Cell { }
-const NEURON_TYPE = Symbol.for('Neuron')
+import { config, cells, presetComponents } from './config.js'
 
-const cells = {}
+
+
+class Cell { 
+    constructor(type, key, props, $$typeof) {
+        this.$$typeof = $$typeof;
+        this.type = type;
+        this.key = key;
+        this.props = props;
+        // owner: owner
+        // source: source,
+
+    return this;
+    };
+};
+
 
 const neuron = function(type, key, props) {
-    const cell = {
-        $$typeof: NEURON_TYPE,
-        type: type,
-        key: key,
-        // source: source,
-        props: props,
-        // owner: owner
-    }
+    const cell = new Cell
 
     return cell
 }
@@ -41,5 +47,15 @@ const createCell = function(type, props, input) {
     return neuron(type, keyValue, props)
 }
 
+const use = (nameSpace, componentDictionary) => {
+    if(presetComponents[nameSpace]) {
+        presetComponents[nameSpace] = {
+            ...presetComponents[nameSpace],
+            ...componentDictionary,
+        }
+    } else {
+        presetComponents[nameSpace] = componentDictionary
+    }
+}
 
-export {createCell, cells, NEURON_TYPE}
+export {createCell, use}
